@@ -1,0 +1,42 @@
+package SubsetAndStrings;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Subsequences4 {
+    public static void main(String[] args) {
+        String s = "abc";
+        int n = s.length();
+        int[] dp = new int[n+1];
+        for(int t: dp){
+            Arrays.fill(dp,-1);
+        }
+        int ans = subseq(s,0,dp);
+        System.out.println(ans);
+        System.out.println(Arrays.toString(dp));
+
+    }
+
+    public static int subseq(String st,int idx,int[] dp){
+        if(idx >= st.length()){
+            return 0;
+        }
+
+        if(dp[idx] != -1){
+            return dp[idx];
+        }
+
+        Set<Character> set = new HashSet<>();
+        int res = 0;
+        for (int j = idx; j < st.length(); j++) {
+            if(set.contains(st.charAt(j))){
+                continue;
+            }
+            set.add(st.charAt(j));
+            res = 1 + subseq(st,j+1,dp) + res;
+        }
+
+        return dp[idx] = res;
+    }
+}
