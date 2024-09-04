@@ -1,3 +1,7 @@
+<p align="left">
+  <img src="https://as1.ftcdn.net/v2/jpg/05/26/58/82/1000_F_526588256_RsCjyS91WJ4T3MA2J4xpTqokLUlGHkyK.jpg" width="100" />
+</p>
+
 # Subsequence and Subsets in Java
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
